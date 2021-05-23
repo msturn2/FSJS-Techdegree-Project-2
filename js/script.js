@@ -115,7 +115,8 @@ function searchFunc(usersSearch) {
 //Used "change" rather than "keyup" since there is a button. Left (event) empty.
 search.addEventListener("change", () => {
    search = document.querySelector("#search");
-   searchFunc(search.value);
+   //imparative to include trim method, handles spaces before and after if entered by user
+   searchFunc(search.value.trim());
 });
 
 //called functions
